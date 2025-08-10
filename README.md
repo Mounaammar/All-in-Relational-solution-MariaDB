@@ -35,3 +35,18 @@ mariadb -uroot -proot -e "SELECT ENGINE,SUPPORT FROM information_schema.ENGINES 
 exit
 ````
 
+## 3) Go inside the containers
+
+```bash
+docker exec -i mariadb_graph mariadb -uroot -proot < data/create_data_graph.sql
+````
+
+```bash
+docker exec -i mcs1 mariadb -uroot <  data/create_data_ts.sql 
+````
+
+(If it doesn't work or if there is an error, replace i with it and then tap line by line inside the container directly)
+
+## 4) Run the hybrid query (Windows cmd)
+Copy and paste the query from the query file directly into the shell.
+
