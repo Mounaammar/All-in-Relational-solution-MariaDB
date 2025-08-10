@@ -20,7 +20,7 @@ It stores the **graph** topology with **OQGRAPH** and the **time-series** metric
 
 ```bash
 docker run -d -p 3307:3306 --shm-size=512m -e PM1=mcs1 --hostname=mcs1 --name mcs1 mariadb/columnstore
-docker run -d --name mariadb_graph -e MARIADB_ROOT_PASSWORD=root -p 3308:3306 mariadb:11.1```
+docker run -d --name mariadb_graph -e MARIADB_ROOT_PASSWORD=root -p 3308:3306 mariadb:11.1 ```bash
 
 #### To enable OQGRAPH:
 docker exec -it mariadb_graph bash
